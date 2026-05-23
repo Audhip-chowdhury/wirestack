@@ -1,0 +1,38 @@
+# vigil configuration file
+# CLI flags override these values
+
+[capture]
+interface = eth0
+snaplen = 65535
+promiscuous = true
+timeout_ms = 1000
+
+[storage]
+db_path = ./data/vigil.db
+max_connections = 10000
+flush_interval_sec = 30
+
+[logging]
+log_path = ./logs/vigil.log
+log_level = INFO
+max_log_size_mb = 100
+rotate_count = 5
+
+[alerts]
+enabled = true
+threshold_pps = 10000
+threshold_bps = 104857600
+alert_command = /etc/vigil/alert.sh
+cooldown_sec = 60
+
+[reporting]
+interval_sec = 300
+output_path = ./logs/reports/
+
+[interfaces]
+# interfaces = eth0,eth1,wlan0
+
+[anomaly]
+enabled = false
+baseline_window_sec = 3600
+deviation_threshold = 3.0

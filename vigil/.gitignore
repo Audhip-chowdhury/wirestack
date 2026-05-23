@@ -1,0 +1,7 @@
+build/
+vigil
+vigil-cli
+data/vigil.db
+logs/*.log
+logs/*.log.*
+logs/reports/
