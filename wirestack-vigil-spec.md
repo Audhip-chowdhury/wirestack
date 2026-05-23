@@ -1542,12 +1542,18 @@ make test
 
 ---
 
-## Notes for QA Engineers
+## Notes for Developers
 
-This codebase contains **21 intentional bugs** across 8 phases for QA and developer training. Each bug is marked with a comment:
+This codebase contains **21 intentional defects** (`VG-001` through `VG-021`) across 8 phases for **developer training**: code review, reproduction, implementation from this spec, and fixes with tests. Each defect is marked in source:
 
 ```c
 // BUG VG-XXX: description
 ```
 
-Bugs cover: memory safety, concurrency, protocol parsing, security, logic errors, and mathematical edge cases. They range from Easy (visible in basic testing) to Hard (require deep knowledge of C memory model, threading, or network protocols to find and reproduce).
+Topics include memory safety, concurrency, protocol parsing, security, logic errors, and numerical edge cases.
+
+- **Onboarding and workflows:** [vigil/DEVELOPERS.md](vigil/DEVELOPERS.md)
+- **Defect index:** [vigil/PRODUCT.md](vigil/PRODUCT.md) (appendix)
+- **Build and run:** [vigil/README.md](vigil/README.md)
+
+Keep intentional defects on the shared **training** branch. Submit real fixes on a separate branch with unit or integration tests. Lab sequencing and guided reproduction are handled by your training bot—not duplicated here.

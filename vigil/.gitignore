@@ -5,3 +5,4 @@ data/vigil.db
 logs/*.log
 logs/*.log.*
 logs/reports/
+/docs/
